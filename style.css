@@ -70,6 +70,7 @@ h1 {
   width: 84%;
   max-width: 1040px;
   margin: 38px auto;
+  flex-wrap: wrap;
 }
 
 .speaker-card {
@@ -78,6 +79,7 @@ h1 {
   border: 2px solid #1f5d78;
   border-radius: 16px;
   background: white;
+   flex: 1 1 240px;
 }
 
 
