@@ -1,98 +1,93 @@
-* { box-sizing: border-box; }
+/* 所有元素都使用比較容易計算的盒模型 */
+* {
+  box-sizing: border-box;
+}
 
+
+/* 整個網頁的基本樣式 */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 40px;
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  color: #17324d;
+  background: #f7f4ed;
+}
+
+
+h1 {
+  margin-top: 0;
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding: 16px 8%;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 7%;
   background: #17324d;
-  color: white;
 }
 
-.site-header h1 { margin: 0 0 8px; }
-.site-header a {
-  margin: 0 12px;
-  color: white;
-  text-decoration: none;
-}
-.hero {
-  min-height: 300px;
-  padding: 64px 8%;
-  background: #1f5d78;
-  color: white;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.hero h2 {
-  margin: 10px 0 16px;
-  font-size: 46px;
+.site-header nav a {
+  margin-left: 18px;
 }
 
-.hero p {
-  max-width: 620px;
-  line-height: 1.8;
-}
+.event-list {
+  display: flex;
+  gap: 20px;
+  width: 84%;
+  max-width: 1040px;
+  margin: 38px auto;
 
+    flex-wrap: wrap;
+}
 
 .event-card {
+  flex: 1;
+  padding: 24px;
+  border: 2px solid #1f5d78;
+  border-radius: 16px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+
+    flex: 1 1 240px;
+
+}
+
+.event-card a {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.speaker-list {
+  display: flex;
+  gap: 20px;
   width: 84%;
-  max-width: 760px;
-  margin: 44px auto;
-  padding: 30px;
-  border: 3px solid #1f5d78;
-  border-radius: 18px;
+  max-width: 1040px;
+  margin: 38px auto;
+}
+
+.speaker-card {
+   flex: 1;
+  padding: 24px;
+  border: 2px solid #1f5d78;
+  border-radius: 16px;
   background: white;
 }
-.event-card h2 {
-  margin-top: 0;
-}
-.with-badge {
-  position: relative;
-}
-.badge {
-  position: absolute;
-  top: -16px;
-  right: 24px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: #e76f51;
-  color: white;
-  font-weight: bold;
-}
 
 
 
-.notice-card {
-  position: relative;
-  width: 84%;
-  max-width: 760px;
-  margin: 44px auto;
-  padding: 30px;
-  border: 3px solid #1f5d78;
-  border-radius: 18px;
-  background: white;
+.speaker-card h2 {
+  display: flex;
+  flex-direction: column;
 }
-.notice-card h2 {
-  margin-top: 0;
-}
-.with-notice-badge {
-  position: relative;
-}
-.notice-badge {
-  position: absolute;
-  top: -16px;
-  left: 24px;
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: #e76f51;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  box-shadow: 0 6px 12px rgba(231, 111, 81, 0.25);
+
+.speaker-card p {
+  margin-top: auto;
+  align-self: flex-start;
 }
